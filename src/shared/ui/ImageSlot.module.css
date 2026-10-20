@@ -1,0 +1,76 @@
+.slot {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: var(--paper-2);
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.placeholder {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 72% 20%, rgba(244, 240, 232, 0.7), transparent 34%),
+    linear-gradient(145deg, #e9e3d7 0%, #ded5c5 55%, #d3c8b6 100%);
+}
+
+.pebble {
+  position: absolute;
+  top: 25%;
+  left: 22%;
+  width: 58%;
+  height: 46%;
+  border-radius: 52% 48% 46% 54% / 58% 56% 44% 42%;
+  background:
+    radial-gradient(circle at 32% 26%, rgba(255, 255, 255, 0.22), transparent 24%),
+    radial-gradient(circle at 38% 32%, #b9b1a2 0%, #9e9586 38%, #7f7769 100%);
+  box-shadow:
+    inset -10px -12px 24px rgba(22, 21, 19, 0.18),
+    inset 8px 8px 18px rgba(255, 255, 255, 0.18);
+  filter: drop-shadow(18px 24px 18px rgba(22, 21, 19, 0.2));
+  clip-path: polygon(
+    16% 34%,
+    26% 18%,
+    42% 9%,
+    59% 8%,
+    75% 17%,
+    88% 31%,
+    93% 49%,
+    88% 67%,
+    77% 81%,
+    60% 90%,
+    42% 88%,
+    27% 78%,
+    16% 62%,
+    12% 47%
+  );
+  transform: rotate(-10deg);
+}
+
+.placeholderLabel {
+  position: absolute;
+  bottom: 14px;
+  left: 14px;
+  z-index: 1;
+  padding: 6px 8px;
+  background: rgba(244, 240, 232, 0.74);
+  color: var(--ink-soft);
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.placeholder[data-label-align='right'] .placeholderLabel {
+  right: 14px;
+  left: auto;
+}

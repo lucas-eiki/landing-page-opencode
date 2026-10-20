@@ -1,0 +1,137 @@
+.certificate {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(24px, 4vw, 48px);
+  border: 1px solid var(--line);
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.certificate::before {
+  position: absolute;
+  inset: 10px;
+  border: 1px solid var(--line);
+  content: '';
+  pointer-events: none;
+}
+
+.head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.eyebrow {
+  color: var(--stone-text);
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.seal {
+  flex: none;
+  color: var(--seal);
+}
+
+.title {
+  margin-top: 20px;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  letter-spacing: -0.045em;
+  line-height: 0.95;
+}
+
+.title:focus,
+.title:focus-visible {
+  outline: none;
+}
+
+.intro {
+  margin-top: 28px;
+  color: var(--stone-text);
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.name {
+  margin-top: 4px;
+  font-family: var(--display);
+  font-size: clamp(2rem, 4vw, 3.4rem);
+  letter-spacing: -0.04em;
+  line-height: 1;
+}
+
+.body {
+  margin-top: 8px;
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.nothing {
+  margin-top: 24px;
+  color: var(--seal);
+  font-family: var(--display);
+  font-size: clamp(1.2rem, 2.2vw, 1.5rem);
+  font-style: italic;
+  line-height: 1.15;
+}
+
+.meta {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px 24px;
+  margin-top: 32px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+}
+
+.meta dt {
+  margin-bottom: 4px;
+  color: var(--stone-text);
+  font-family: var(--mono);
+  font-size: 8px;
+  letter-spacing: 0.13em;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.meta dd {
+  margin: 0;
+  color: var(--ink-soft);
+  font-family: var(--mono);
+  font-size: 10px;
+  line-height: 1.55;
+  overflow-wrap: anywhere;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+.fictional {
+  margin-top: 20px;
+  color: var(--stone-text);
+  font-family: var(--mono);
+  font-size: 8px;
+  letter-spacing: 0.08em;
+  line-height: 1.6;
+  text-transform: uppercase;
+}
+
+@media (max-width: 480px) {
+  .meta {
+    grid-template-columns: 1fr;
+  }
+
+  .actions > * {
+    flex: 1 1 100%;
+  }
+}
