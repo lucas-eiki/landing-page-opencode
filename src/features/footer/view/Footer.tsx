@@ -15,7 +15,7 @@ export function Footer() {
           <div className={styles.intro}>
             <p className={styles.eyebrow}>{site.tagline}</p>
             <p className={styles.statement}>
-              A pedra não faz nada.
+              A rocha não faz nada.
               <br />
               Você também não precisa.
             </p>

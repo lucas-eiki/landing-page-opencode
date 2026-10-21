@@ -1,6 +1,6 @@
 # Casa Seixo
 
-Landing page fictícia da **Casa Seixo** — “pedras de edição limitada para quem já tem tudo”. O projeto foi construído como trabalho de Web Front-End da SPTech, com React, TypeScript e CSS Modules, sem backend, banco de dados ou APIs externas.
+Landing page fictícia da **Casa Seixo** — “rochas de edição limitada para quem já tem tudo”. O projeto foi construído como trabalho de Web Front-End da SPTech, com React, TypeScript e CSS Modules, sem backend, banco de dados ou APIs externas.
 
 > **Aviso:** Casa Seixo é uma marca fictícia. Produtos, preços, depoimentos e reservas são fictícios. Nenhum pagamento é processado e nenhum dado sai do navegador.
 
@@ -81,28 +81,37 @@ src/
 7. A reserva é salva em `localStorage` sob a chave versionada `casa-seixo:reservation:v1`.
 8. “Fazer nova reserva” limpa o armazenamento e devolve o formulário.
 
-Se o `localStorage` estiver indisponível, a reserva continua funcionando em memória e um aviso é exibido. A edição **Óxido** é de arquivo: aparece no catálogo, mas não oferece reserva.
+Se o `localStorage` estiver indisponível, a reserva continua funcionando em memória e um aviso é exibido. A edição **Rocha filosófica** é de arquivo: aparece no catálogo, mas não oferece reserva.
 
 ## Imagens
 
-As imagens de produto ainda não foram fornecidas. O componente `ImageSlot` reserva a proporção final e exibe um placeholder rotulado, escondido de tecnologias assistivas:
+As imagens do catálogo ficam em `src/assets/images/` e são importadas diretamente no catálogo (`src/shared/data/editions.ts`), para que o Vite gere os arquivos locais com hash e os mantenha disponíveis offline. Não é necessário mover nada para `public/`.
+
+| Edição | Arquivo | Posição do recorte |
+| --- | --- | --- |
+| Bocchi, A Rocha | `bocchi-the-rock.jpg` | `50% 35%` |
+| Rocha matriz | `bedrock.png` | `50% 50%` |
+| Rocha sigma | `moai.jpeg` | `50% 30%` |
+| Rocha filosófica | `rocha-filosofica.png` | `50% 50%` |
+
+As importações ficam no topo de `editions.ts`:
+
+```ts
+import bocchi from '../../assets/images/bocchi-the-rock.jpg'
+import bedrock from '../../assets/images/bedrock.png'
+import moai from '../../assets/images/moai.jpeg'
+import rochaFilosofica from '../../assets/images/rocha-filosofica.png'
+```
+
+O componente `ImageSlot` mantém a proporção de 4:5, `object-fit: cover` e o placeholder acessível:
 
 - Hero e cards de edição: **4:5**
 - Manifesto e casa: **3:2**
 - Catálogo e oferta compartilham o mesmo objeto `Edition` em `src/shared/data/editions.ts`
 
-Para trocar um placeholder por uma foto, coloque o arquivo em `public/images/` e preencha `image` na edição correspondente:
+O hero continua sem imagem e exibe o placeholder rotulado com o crédito “Ed. nº 01 / Bocchi, A Rocha”. A fotografia principal será adicionada depois.
 
-```ts
-{
-  id: 'basalto',
-  image: '/images/basalto.jpg',
-  alt: 'Pedra de basalto preta, fosca e irregular, sobre fundo de gesso claro.',
-  // ...
-}
-```
-
-Briefing de fotografia: pedra isolada sobre gesso ou papel algodão, luz lateral suave, sombra longa, sem props, sem mãos, sem ambiente doméstico. A pedra deve ocupar cerca de 50–60% do quadro. Manter o texto alternativo descritivo ao substituir a imagem.
+As imagens são referências externas usadas neste trabalho acadêmico: Bocchi the Rock, o bloco de Minecraft (Bedrock), uma estátua moai e uma referência à Pedra Filosofal. Antes de uma publicação pública, substitua ou credite os assets conforme a licença de cada obra.
 
 ## Acessibilidade e movimento
 

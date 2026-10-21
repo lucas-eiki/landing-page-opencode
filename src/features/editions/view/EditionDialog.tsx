@@ -26,6 +26,7 @@ export function EditionDialog({ edition, open, onClose, onReserve }: EditionDial
             alt={edition.alt}
             ratio="4/5"
             label={`Imagem 4:5 / Ed. ${edition.number}`}
+            objectPosition={edition.imagePosition}
             className={styles.image}
           />
         </div>

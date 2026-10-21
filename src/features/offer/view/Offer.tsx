@@ -10,7 +10,7 @@ import styles from './Offer.module.css'
 
 export function Offer() {
   const { requestReservation } = useReservation()
-  const archiveEdition = getEditionById('oxido')
+  const archiveEdition = getEditionById('rocha-filosofica')
 
   return (
     <section id="aquisicao" className={`${styles.section} section`} aria-labelledby="offer-title">

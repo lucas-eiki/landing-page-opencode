@@ -3,20 +3,20 @@ export const waitlistContent = {
   eyebrow: 'Lista de reserva',
   title: 'Entre na lista. Não enviaremos nada.',
   intro:
-    'Reserve uma edição e receba um Certificado de Inutilidade. O resto — como o que fazer com uma pedra — fica com você.',
+    'Reserve uma edição e receba um Certificado de Inutilidade. O resto — como o que fazer com uma rocha — fica com você.',
   aside:
     'Seus dados ficam no navegador. Nada é enviado, nada é cobrado, nada acontece.',
   formTitle: 'Reserva de edição',
   fields: {
     edition: 'Edição',
-    editionPlaceholder: 'Escolha uma pedra',
+    editionPlaceholder: 'Escolha uma rocha',
     editionArchiveSuffix: ' — em arquivo',
     name: 'Nome',
     namePlaceholder: 'Como devemos chamar você',
     email: 'E-mail',
     emailPlaceholder: 'voce@exemplo.com',
     consent:
-      'Entendo que a pedra não faz nada e que esta reserva é uma simulação. Nenhum dado será enviado.',
+      'Entendo que a rocha não faz nada e que esta reserva é uma simulação. Nenhum dado será enviado.',
   },
   submit: 'Confirmar reserva',
   submitting: 'Anotando o nada…',
@@ -24,14 +24,14 @@ export const waitlistContent = {
   success: {
     eyebrow: 'Reserva confirmada',
     title: 'Bem-vindo ao nada.',
-    body: 'Sua pedra está reservada em nome de {name}. Guarde o certificado: ele não serve para nada, mas é seu.',
+    body: 'Sua rocha está reservada em nome de {name}. Guarde o certificado: ele não serve para nada, mas é seu.',
   },
   certificate: {
     eyebrow: 'Casa Seixo / Documento',
     title: 'Certificado de Inutilidade',
     intro: 'Certificamos que',
     reserved: 'reservou a edição',
-    nothing: 'Esta pedra não serve para nada. Guarde com cuidado.',
+    nothing: 'Esta rocha não serve para nada. Guarde com cuidado.',
     protocol: 'Protocolo',
     date: 'Emitido em',
     position: 'Posição na lista',
@@ -46,6 +46,6 @@ export const waitlistContent = {
     editionId: 'Escolha uma edição disponível.',
     name: 'Informe seu nome (pelo menos 2 caracteres).',
     email: 'Informe um e-mail válido.',
-    consent: 'Confirme que você entende que a pedra não faz nada.',
+    consent: 'Confirme que você entende que a rocha não faz nada.',
   },
 } as const

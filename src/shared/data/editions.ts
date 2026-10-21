@@ -1,82 +1,102 @@
+import bocchi from '../../assets/images/bocchi-the-rock.jpg'
+import bedrock from '../../assets/images/bedrock.png'
+import moai from '../../assets/images/moai.jpeg'
+import rochaFilosofica from '../../assets/images/rocha-filosofica.png'
 import type { Edition } from '../model/edition'
 
 export const editions: Edition[] = [
   {
-    id: 'basalto',
+    id: 'bocchi',
     number: '01',
-    name: 'Basalto',
-    stone: 'Basalto',
+    name: 'Bocchi, A Rocha',
+    stone: 'Rocha sedimentar',
     description:
-      'Uma pedra escura, densa e discreta. Não reflete luz, não puxa conversa e não combina com nada — o que, segundo a casa, é uma forma superior de combinar.',
-    provenance: 'Pedreira da família Seixo, Serra do Cipó, Minas Gerais.',
+      'Uma rocha tímida, com pavor de plateia e uma playlist inteira. Não se apresenta em público, mas adora música — desde que ninguém esteja ouvindo.',
+    provenance: 'Pedreira da família Seixo, setor de ensaio, Minas Gerais.',
     includes: [
-      'Uma pedra de basalto de 9 a 12 cm',
+      'Uma rocha tímida de 9 a 12 cm',
       'Certificado de Inutilidade numerado',
       'Embalagem de papel algodão',
       'Guia de uso: uma página em branco',
     ],
     price: 490,
     availability: 'available',
-    alt: 'Pedra de basalto preta, fosca e irregular, sobre fundo de gesso claro.',
+    image: bocchi,
+    imagePosition: '50% 35%',
+    alt: 'Ilustração de uma personagem de cabelo rosa com corpo de rocha, sobre uma paisagem montanhosa.',
   },
   {
-    id: 'granito',
+    id: 'rocha-matriz',
     number: '02',
-    name: 'Granito',
-    stone: 'Granito',
+    name: 'Rocha matriz',
+    stone: 'Rocha ígnea',
     description:
-      'Cinza, salpicado e teimosamente estável. A edição preferida de quem gosta de objetos que não mudam de opinião. Também a preferida de quem não tem opinião.',
-    provenance: 'Pedreira da família Seixo, Serra do Cipó, Minas Gerais.',
+      'A camada mais profunda da Terra, agora em edição numerada. Indestrutível, silenciosa e anterior a qualquer problema. A base de tudo, sem nenhuma utilidade.',
+    provenance: 'Pedreira da família Seixo, galeria do subsolo, Minas Gerais.',
     includes: [
-      'Uma pedra de granito de 9 a 12 cm',
+      'Uma amostra de rocha matriz de 9 a 12 cm',
       'Certificado de Inutilidade numerado',
       'Embalagem de papel algodão',
       'Guia de uso: uma página em branco',
     ],
     price: 890,
     availability: 'available',
-    alt: 'Pedra de granito cinza com pintas claras, apoiada sobre papel de gesso.',
+    image: bedrock,
+    imagePosition: '50% 50%',
+    alt: 'Cubo cinza pixelado com textura de rocha, sobre fundo preto.',
   },
   {
-    id: 'quartzo',
+    id: 'rocha-sigma',
     number: '03',
-    name: 'Quartzo',
-    stone: 'Quartzo leitoso',
+    name: 'Rocha sigma',
+    stone: 'Rocha vulcânica',
     description:
-      'A edição mais clara da casa. Uma pedra que parece guardar alguma coisa, mas não guarda. É só uma pedra, e é bastante.',
-    provenance: 'Pedreira da família Seixo, Serra do Cipó, Minas Gerais.',
+      'Uma rocha muito sigma. Não dá explicações, não segue o grupo e não precisa de plateia. Apenas permanece.',
+    provenance: 'Pedreira da família Seixo, setor dos monólitos, Minas Gerais.',
     includes: [
-      'Uma pedra de quartzo leitoso de 8 a 11 cm',
+      'Uma rocha sigma de 9 a 12 cm',
       'Certificado de Inutilidade numerado',
       'Embalagem de papel algodão',
       'Guia de uso: uma página em branco',
     ],
     price: 1290,
     availability: 'available',
-    alt: 'Pedra de quartzo leitoso, clara e translúcida, sobre superfície de gesso.',
+    image: moai,
+    imagePosition: '50% 30%',
+    alt: 'Duas estátuas moai de rocha em uma colina gramada, sob céu azul.',
   },
   {
-    id: 'oxido',
+    id: 'rocha-filosofica',
     number: '04',
-    name: 'Óxido',
-    stone: 'Arenito com óxido',
+    name: 'Rocha filosófica',
+    stone: 'Rocha metamórfica',
     description:
-      'A edição de arquivo. Marcas de ferro, tempo e umidade. Não está mais disponível, mas continua sendo a pedra que mais aparece nas fotografias da casa.',
-    provenance: 'Pedreira da família Seixo, Serra do Cipó, Minas Gerais.',
+      'Parente distante da Pedra Filosofal, mas sem os poderes, as propriedades místicas ou a ambição de transformar metal em ouro. É só uma rocha, e é bastante.',
+    provenance: 'Pedreira da família Seixo, prateleira de alquimia, Minas Gerais.',
     includes: [
-      'Uma pedra de arenito com veios de óxido',
+      'Uma rocha filosófica de 9 a 12 cm',
       'Certificado de Inutilidade de arquivo',
       'Embalagem de papel algodão',
       'Guia de uso: uma página em branco',
     ],
     price: 4900,
     availability: 'archive',
-    alt: 'Pedra de arenito com veios ferrugem de óxido, sobre fundo de gesso.',
+    image: rochaFilosofica,
+    imagePosition: '50% 50%',
+    alt: 'Rocha vermelha brilhante com veios claros, sobre fundo preto.',
   },
 ]
+
+const legacyEditionIds: Record<string, string> = {
+  basalto: 'bocchi',
+  granito: 'rocha-matriz',
+  quartzo: 'rocha-sigma',
+  oxido: 'rocha-filosofica',
+}
 
 export const availableEditions = editions.filter((edition) => edition.availability === 'available')
 
 export function getEditionById(id: string): Edition | undefined {
-  return editions.find((edition) => edition.id === id)
+  const normalizedId = legacyEditionIds[id] ?? id
+  return editions.find((edition) => edition.id === normalizedId)
 }

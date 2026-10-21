@@ -1,6 +1,6 @@
 export const editionsContent = {
   label: '02',
-  title: 'Quatro pedras. Nenhuma função.',
+  title: 'Quatro rochas. Nenhuma função.',
   intro:
     'Quatro edições numeradas, uma delas já em arquivo. Todas escolhidas pela mesma criteriosa ausência de propósito.',
   cardAction: 'Ver detalhes',

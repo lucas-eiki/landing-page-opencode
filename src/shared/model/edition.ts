@@ -11,5 +11,6 @@ export interface Edition {
   price: number
   availability: EditionAvailability
   image?: string
+  imagePosition?: string
   alt: string
 }

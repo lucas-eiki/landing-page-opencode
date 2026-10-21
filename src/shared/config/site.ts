@@ -4,7 +4,7 @@ export const site = {
   name: 'Casa Seixo',
   wordmark: 'casa seixo',
   tagline: 'Nada, desde 1987.',
-  description: 'Pedras de edição limitada para quem já tem tudo.',
+  description: 'Rochas de edição limitada para quem já tem tudo.',
   currentYear: 2026,
 } as const
 

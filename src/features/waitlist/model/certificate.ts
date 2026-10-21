@@ -11,7 +11,7 @@ export function buildCertificateText(entry: WaitlistEntry, edition: Edition): st
     `Certificamos que ${entry.name}`,
     `reservou a edição ${edition.number} / ${edition.name}.`,
     '',
-    'Esta pedra não serve para nada.',
+    'Esta rocha não serve para nada.',
     'Guarde com cuidado.',
     '',
     `Emitido em: ${formatLongDate(entry.createdAt)}`,

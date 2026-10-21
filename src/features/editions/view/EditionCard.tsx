@@ -20,6 +20,7 @@ export function EditionCard({ edition, onOpen }: EditionCardProps) {
           alt={edition.alt}
           ratio="4/5"
           label={`Imagem 4:5 / Ed. ${edition.number}`}
+          objectPosition={edition.imagePosition}
           className={styles.imageSlot}
         />
         <span className={styles.badge}>

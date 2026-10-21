@@ -11,6 +11,7 @@ interface ImageSlotProps {
   labelAlign?: ImageLabelAlign
   className?: string
   priority?: boolean
+  objectPosition?: string
 }
 
 export function ImageSlot({
@@ -21,6 +22,7 @@ export function ImageSlot({
   labelAlign = 'left',
   className,
   priority = false,
+  objectPosition,
 }: ImageSlotProps) {
   return (
     <figure
@@ -34,6 +36,7 @@ export function ImageSlot({
           alt={alt}
           loading={priority ? 'eager' : 'lazy'}
           decoding="async"
+          style={objectPosition ? { objectPosition } : undefined}
         />
       ) : (
         <div

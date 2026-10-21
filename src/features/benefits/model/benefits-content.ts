@@ -19,7 +19,7 @@ export const benefitsContent = {
     {
       number: '01',
       title: 'Não ocupa a mente',
-      text: 'Uma pedra não tem notificações. A sua atenção continua sendo sua.',
+      text: 'Uma rocha não tem notificações. A sua atenção continua sendo sua.',
     },
     {
       number: '02',
@@ -29,12 +29,12 @@ export const benefitsContent = {
     {
       number: '03',
       title: 'Não fica obsoleta',
-      text: 'A cada ano lançamos novas edições. A pedra antiga continua exatamente igual.',
+      text: 'A cada ano lançamos novas edições. A rocha antiga continua exatamente igual.',
     },
     {
       number: '04',
       title: 'Não promete felicidade',
-      text: 'Promessas são para produtos. A pedra prefere não se comprometer.',
+      text: 'Promessas são para produtos. A rocha prefere não se comprometer.',
     },
   ] satisfies Benefit[],
   table: {
