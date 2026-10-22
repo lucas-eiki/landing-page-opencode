@@ -1,6 +1,5 @@
 import { Button } from '../../../shared/ui/Button'
 import { ImageSlot } from '../../../shared/ui/ImageSlot'
-import { Seal } from '../../../shared/ui/Seal'
 import { useReservation } from '../../../app/providers/useReservation'
 import { heroContent } from '../model/hero-content'
 import styles from './Hero.module.css'
@@ -40,14 +39,12 @@ export function Hero() {
         <div className={styles.media}>
           <div className={styles.frame}>
             <ImageSlot
+              src={heroContent.imageSrc}
               alt={heroContent.imageAlt}
               ratio="4/5"
-              label={heroContent.imageLabel}
-              labelAlign="right"
               priority
               className={styles.image}
             />
-            <Seal number="01" size={104} className={styles.seal} />
           </div>
           <div className={styles.caption}>
             <span>{heroContent.captionLeft}</span>

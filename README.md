@@ -109,11 +109,11 @@ O componente `ImageSlot` mantém a proporção de 4:5, `object-fit: cover` e o p
 - Manifesto e casa: **3:2**
 - Catálogo e oferta compartilham o mesmo objeto `Edition` em `src/shared/data/editions.ts`
 
-O hero continua sem imagem e exibe o placeholder rotulado com o crédito “Ed. nº 01 / Bocchi, A Rocha”. A fotografia principal será adicionada depois.
+O hero usa `seixos.jpg` como imagem de arquivo/matéria-prima, importada localmente em `src/features/hero/model/hero-content.ts`. Ela não representa uma edição do catálogo e não recebe número ou nome de edição.
 
 Os avatares dos depoimentos usam `toph.png`, `rock-lee.png` e `the-rock.png`, importados localmente por `src/features/testimonials/model/testimonials-content.ts`.
 
-As imagens são referências externas usadas neste trabalho acadêmico: Bocchi the Rock, o bloco de Minecraft (Bedrock), uma estátua moai, uma referência à Pedra Filosofal e retratos de Toph Beifong (Avatar), Rock Lee (Naruto) e Dwayne Johnson/The Rock. Antes de uma publicação pública, substitua ou credite os assets conforme a licença e os direitos de imagem de cada obra ou pessoa.
+As imagens são referências externas usadas neste trabalho acadêmico: Bocchi the Rock, o bloco de Minecraft (Bedrock), uma estátua moai, uma referência à Pedra Filosofal, uma fotografia de seixos e retratos de Toph Beifong (Avatar), Rock Lee (Naruto) e Dwayne Johnson/The Rock. Antes de uma publicação pública, substitua ou credite os assets conforme a licença e os direitos de imagem de cada obra ou pessoa.
 
 ## Acessibilidade e movimento
 

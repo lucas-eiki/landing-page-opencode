@@ -1,3 +1,5 @@
+import seixos from '../../../assets/images/seixos.jpg'
+
 export const heroContent = {
   kicker: 'Casa Seixo — rochas de edição limitada',
   titleLines: ['Nada,', 'desde 1987.'],
@@ -6,8 +8,8 @@ export const heroContent = {
   primaryCta: 'Entrar na lista',
   secondaryCta: 'Ver as edições',
   microcopy: 'Role para descobrir o nada',
-  imageLabel: 'Imagem 4:5 / Ed. 01',
-  imageAlt: 'Rocha da edição 01 sobre uma superfície de gesso.',
-  captionLeft: 'Ed. nº 01 / Bocchi, A Rocha',
+  imageSrc: seixos,
+  imageAlt: 'Pilha de seixos de tons quentes vista de cima.',
+  captionLeft: 'Seixos / Matéria-prima',
   captionRight: 'Fotografia / Arquivo',
 } as const

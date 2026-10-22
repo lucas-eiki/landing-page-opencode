@@ -106,16 +106,6 @@
   box-shadow: var(--shadow-image);
 }
 
-.seal {
-  position: absolute;
-  bottom: -34px;
-  left: -34px;
-  padding: 5px;
-  border-radius: 50%;
-  background: var(--paper);
-  box-shadow: 0 0 0 1px var(--line);
-}
-
 .caption {
   display: flex;
   justify-content: space-between;
@@ -153,11 +143,6 @@
     justify-self: start;
     max-width: 520px;
     margin-top: 24px;
-  }
-
-  .seal {
-    bottom: -20px;
-    left: -10px;
   }
 
   .caption {
