@@ -25,14 +25,6 @@ export function Manifesto() {
           </a>
         </div>
 
-        <figure className={styles.archive}>
-          <ImageSlot
-            alt={manifestoContent.imageAlt}
-            ratio="3/2"
-            label={manifestoContent.imageLabel}
-          />
-          <figcaption>{manifestoContent.caption}</figcaption>
-        </figure>
       </div>
     </section>
   )
