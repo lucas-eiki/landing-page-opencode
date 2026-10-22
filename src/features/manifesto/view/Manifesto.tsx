@@ -1,4 +1,3 @@
-import { ImageSlot } from '../../../shared/ui/ImageSlot'
 import { SectionLabel } from '../../../shared/ui/SectionLabel'
 import { manifestoContent } from '../model/manifesto-content'
 import styles from './Manifesto.module.css'

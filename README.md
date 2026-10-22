@@ -106,10 +106,12 @@ import rochaFilosofica from '../../assets/images/rocha-filosofica.png'
 O componente `ImageSlot` mantém a proporção de 4:5, `object-fit: cover` e o placeholder acessível:
 
 - Hero e cards de edição: **4:5**
-- Manifesto e casa: **3:2**
+- Manifesto: **3:2**
 - Catálogo e oferta compartilham o mesmo objeto `Edition` em `src/shared/data/editions.ts`
 
 O hero usa `seixos.jpg` como imagem de arquivo/matéria-prima, importada localmente em `src/features/hero/model/hero-content.ts`. Ela não representa uma edição do catálogo e não recebe número ou nome de edição.
+
+A seção `A casa` não usa imagem; ela mantém o rótulo, a frase "Escolher pouco, numerar tudo, explicar nada." e uma faixa monumental com três métricas: 39 anos sem fabricar nada, 04 edições por ano e 00 funções declaradas.
 
 Os avatares dos depoimentos usam `toph.png`, `rock-lee.png` e `the-rock.png`, importados localmente por `src/features/testimonials/model/testimonials-content.ts`.
 
