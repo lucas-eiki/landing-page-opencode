@@ -1,0 +1,214 @@
+.section {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: clamp(40px, 6vw, 96px);
+  align-items: start;
+}
+
+.copy {
+  padding-top: 8px;
+}
+
+.eyebrow {
+  margin-top: clamp(32px, 5vw, 56px);
+  color: rgba(244, 240, 232, 0.55);
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.title {
+  max-width: 11ch;
+  margin-top: 16px;
+  font-size: clamp(2.6rem, 5.4vw, 5rem);
+  letter-spacing: -0.05em;
+  line-height: 0.92;
+}
+
+.intro {
+  max-width: 38ch;
+  margin-top: 28px;
+  color: rgba(244, 240, 232, 0.72);
+  font-size: 1rem;
+  line-height: 1.72;
+}
+
+.aside {
+  max-width: 44ch;
+  margin-top: 32px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(244, 240, 232, 0.2);
+  color: rgba(244, 240, 232, 0.62);
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.08em;
+  line-height: 1.7;
+  text-transform: uppercase;
+}
+
+.seal {
+  margin-top: 48px;
+  color: var(--seal-soft);
+  opacity: 0.9;
+}
+
+.panel {
+  min-width: 0;
+}
+
+.notice {
+  margin-bottom: 16px;
+  padding: 12px 14px;
+  border: 1px solid rgba(244, 240, 232, 0.28);
+  color: rgba(244, 240, 232, 0.7);
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.04em;
+  line-height: 1.6;
+}
+
+.formCard {
+  padding: clamp(24px, 4vw, 48px);
+  border: 1px solid var(--line);
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.formEyebrow {
+  margin-bottom: 28px;
+  color: var(--seal);
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.form {
+  display: grid;
+  gap: 24px;
+}
+
+.control {
+  width: 100%;
+  padding: 12px 0;
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 0;
+  background: transparent;
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 1rem;
+  line-height: 1.4;
+  transition: border-color 0.2s var(--ease);
+}
+
+.control::placeholder {
+  color: var(--stone-text);
+  opacity: 1;
+}
+
+.control:hover {
+  border-bottom-color: var(--stone-text);
+}
+
+.control:focus {
+  border-bottom-color: var(--ink);
+}
+
+.control[aria-invalid='true'] {
+  border-bottom-color: var(--seal);
+}
+
+.control:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+select.control {
+  padding-right: 28px;
+  appearance: none;
+  background-color: transparent;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5 6 6.5 11 1.5' fill='none' stroke='%23161513' stroke-width='1.2'/%3E%3C/svg%3E");
+  background-position: right 2px center;
+  background-repeat: no-repeat;
+  background-size: 12px 8px;
+}
+
+select.control option {
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.consentField {
+  display: grid;
+  gap: 8px;
+}
+
+.consent {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.consent input {
+  flex: none;
+  width: 18px;
+  height: 18px;
+  margin: 3px 0 0;
+  accent-color: var(--seal);
+}
+
+.consent label {
+  color: var(--ink-soft);
+  font-size: 0.84rem;
+  line-height: 1.55;
+}
+
+.consentError {
+  color: var(--seal);
+  font-family: var(--mono);
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.submit {
+  width: 100%;
+  margin-top: 8px;
+}
+
+.progress {
+  min-height: 1.4em;
+  color: var(--stone-text);
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.08em;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .seal {
+    margin-top: 32px;
+  }
+}
+
+@media (max-width: 560px) {
+  .title {
+    max-width: 100%;
+    font-size: clamp(2.4rem, 14vw, 3.6rem);
+  }
+
+  .formCard {
+    padding: 22px 18px;
+  }
+}

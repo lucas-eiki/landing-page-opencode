@@ -1,0 +1,136 @@
+.section {
+  background: var(--paper-2);
+}
+
+.header {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
+  gap: 32px 64px;
+  align-items: end;
+  margin-top: clamp(32px, 5vw, 56px);
+}
+
+.title {
+  max-width: 11ch;
+  font-size: clamp(2.6rem, 5.8vw, 5.2rem);
+  letter-spacing: -0.05em;
+  line-height: 0.92;
+}
+
+.intro {
+  max-width: 40ch;
+  padding-bottom: 8px;
+  color: var(--ink-soft);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(40px, 8vw, 120px);
+  margin-top: clamp(48px, 7vw, 80px);
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.statValue {
+  font-family: var(--display);
+  font-size: clamp(3.4rem, 7vw, 7rem);
+  letter-spacing: -0.055em;
+  line-height: 0.82;
+}
+
+.statLabel {
+  max-width: 24ch;
+  color: var(--stone-text);
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.13em;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.quotes {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 32px;
+  margin-top: clamp(56px, 8vw, 96px);
+}
+
+.quote {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 32px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+}
+
+.quote blockquote {
+  font-family: var(--display);
+  font-size: clamp(1.4rem, 2.2vw, 2rem);
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+}
+
+.attribution {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--stone-text);
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  line-height: 1.6;
+  text-transform: uppercase;
+}
+
+.attributionText {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.avatar {
+  width: clamp(64px, 7vw, 80px);
+  height: clamp(64px, 7vw, 80px);
+  flex: 0 0 auto;
+  object-fit: cover;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+}
+
+.note {
+  margin-top: 40px;
+  color: var(--stone-text);
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 820px) {
+  .header {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .intro {
+    padding-bottom: 0;
+  }
+
+  .quotes {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .quote {
+    gap: 20px;
+  }
+}

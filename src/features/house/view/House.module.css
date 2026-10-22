@@ -1,0 +1,96 @@
+.section {
+  background: var(--paper);
+}
+
+.phrase {
+  max-width: 15ch;
+  margin-top: clamp(36px, 5vw, 64px);
+  font-size: clamp(2.1rem, 6.7vw, 6.5rem);
+  font-variation-settings: 'opsz' 144, 'WONK' 1;
+  letter-spacing: -0.055em;
+  line-height: 0.9;
+  text-wrap: balance;
+}
+
+.band {
+  margin-top: clamp(48px, 7vw, 88px);
+  padding-block: clamp(44px, 7vw, 88px);
+  border-block: 1px solid var(--line);
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin: 0;
+}
+
+.stat {
+  display: grid;
+  grid-template-rows: auto auto;
+  gap: 14px;
+  padding-inline: clamp(20px, 4vw, 56px);
+}
+
+.stat:first-child {
+  padding-left: 0;
+}
+
+.stat:last-child {
+  padding-right: 0;
+}
+
+.stat + .stat {
+  border-left: 1px solid var(--line);
+}
+
+.stat dt {
+  grid-row: 2;
+  max-width: 30ch;
+  color: var(--stone-text);
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.stat dd {
+  grid-row: 1;
+  margin: 0;
+  color: var(--ink);
+  font-family: var(--display);
+  font-size: clamp(4.4rem, 10vw, 9.4rem);
+  font-variation-settings: 'opsz' 144, 'WONK' 1;
+  letter-spacing: -0.06em;
+  line-height: 0.8;
+}
+
+@media (max-width: 640px) {
+  .phrase {
+    max-width: 100%;
+  }
+
+  .stats {
+    grid-template-columns: 1fr;
+  }
+
+  .stat {
+    padding-block: 24px;
+    padding-inline: 0;
+  }
+
+  .stat:first-child {
+    padding-top: 0;
+  }
+
+  .stat:last-child {
+    padding-bottom: 0;
+  }
+
+  .stat + .stat {
+    border-left: 0;
+    border-top: 1px solid var(--line);
+  }
+}

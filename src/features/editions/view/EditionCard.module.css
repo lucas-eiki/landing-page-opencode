@@ -1,0 +1,126 @@
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.mediaWrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.imageSlot {
+  transition: transform 0.6s var(--ease);
+}
+
+.card:hover .imageSlot {
+  transform: scale(1.015);
+}
+
+.badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 1;
+  padding: 6px 8px;
+  background: var(--paper);
+  color: var(--ink-soft);
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.13em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.archive .badge {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 18px;
+  padding-top: 12px;
+  border-top: 1px solid var(--line);
+  color: var(--stone-text);
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.11em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.name {
+  margin-top: 10px;
+  font-size: clamp(2rem, 3.2vw, 3.2rem);
+  letter-spacing: -0.04em;
+}
+
+.description {
+  max-width: 46ch;
+  margin-top: 12px;
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+  line-height: 1.65;
+}
+
+.footer {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+}
+
+.view {
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  color: var(--seal);
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.13em;
+  opacity: 0;
+  text-transform: uppercase;
+  transform: translateX(-6px);
+  transition:
+    opacity 0.25s var(--ease),
+    transform 0.25s var(--ease);
+}
+
+.card:hover .view,
+.card:focus-within .view {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.overlay:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 6px;
+}
+
+.archive .imageSlot {
+  filter: saturate(0.75);
+}
+
+@media (max-width: 760px) {
+  .view {
+    opacity: 1;
+    transform: none;
+  }
+}

@@ -1,0 +1,25 @@
+:root {
+  color-scheme: light;
+
+  --paper: #f4f0e8;
+  --paper-2: #e9e3d7;
+  --ink: #161513;
+  --ink-soft: #3a3733;
+  --stone: #8c8679;
+  --stone-text: #696257;
+  --line: #d6cfc0;
+  --seal: #6b2e2a;
+  --seal-soft: #8a4a43;
+
+  --display: 'Fraunces', Georgia, 'Times New Roman', serif;
+  --body: 'Archivo', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --mono: 'IBM Plex Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace;
+
+  --max-width: 1360px;
+  --gutter: 24px;
+  --margin: clamp(20px, 5vw, 72px);
+  --section-y: clamp(80px, 12vw, 168px);
+  --header-h: 72px;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --shadow-image: 0 24px 60px rgba(22, 21, 19, 0.12);
+}

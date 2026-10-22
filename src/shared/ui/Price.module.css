@@ -1,0 +1,28 @@
+.price {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 10px;
+  font-family: var(--display);
+  font-variation-settings: 'opsz' 120, 'WONK' 1;
+  line-height: 1;
+}
+
+.sm .value {
+  font-size: 1.3rem;
+}
+
+.md .value {
+  font-size: clamp(1.8rem, 2.6vw, 2.4rem);
+}
+
+.lg .value {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+}
+
+.note {
+  color: var(--stone-text);
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}

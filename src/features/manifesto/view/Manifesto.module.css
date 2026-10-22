@@ -1,0 +1,87 @@
+.section {
+  padding-block: var(--section-y);
+}
+
+.body {
+  max-width: 780px;
+  margin: clamp(40px, 6vw, 72px) auto 0;
+}
+
+.title {
+  max-width: 13ch;
+  font-size: clamp(2.6rem, 5.8vw, 5.2rem);
+  letter-spacing: -0.045em;
+  line-height: 0.94;
+}
+
+.paragraphs {
+  display: grid;
+  gap: 24px;
+  margin-top: clamp(32px, 4vw, 48px);
+  color: var(--ink-soft);
+  font-size: clamp(1rem, 1.1vw, 1.08rem);
+  line-height: 1.72;
+}
+
+.paragraphs p:first-child::first-letter {
+  float: left;
+  padding: 8px 12px 0 0;
+  color: var(--seal);
+  font-family: var(--display);
+  font-size: 4.6em;
+  font-variation-settings: 'opsz' 144, 'WONK' 1;
+  line-height: 0.72;
+}
+
+.quote {
+  max-width: 18ch;
+  margin-top: clamp(48px, 6vw, 72px);
+  color: var(--seal);
+  font-family: var(--display);
+  font-size: clamp(2rem, 4vw, 3.6rem);
+  font-style: italic;
+  letter-spacing: -0.035em;
+  line-height: 1.05;
+}
+
+.link {
+  display: inline-flex;
+  gap: 14px;
+  align-items: center;
+  margin-top: 40px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid var(--ink);
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.archive {
+  max-width: 980px;
+  margin: clamp(64px, 10vw, 120px) auto 0;
+}
+
+.archive figcaption {
+  margin-top: 12px;
+  color: var(--stone-text);
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+@media (max-width: 640px) {
+  .body {
+    margin-top: 32px;
+  }
+
+  .title {
+    max-width: 100%;
+  }
+
+  .paragraphs p:first-child::first-letter {
+    font-size: 3.8em;
+  }
+}
