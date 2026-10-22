@@ -111,7 +111,9 @@ O componente `ImageSlot` mantém a proporção de 4:5, `object-fit: cover` e o p
 
 O hero continua sem imagem e exibe o placeholder rotulado com o crédito “Ed. nº 01 / Bocchi, A Rocha”. A fotografia principal será adicionada depois.
 
-As imagens são referências externas usadas neste trabalho acadêmico: Bocchi the Rock, o bloco de Minecraft (Bedrock), uma estátua moai e uma referência à Pedra Filosofal. Antes de uma publicação pública, substitua ou credite os assets conforme a licença de cada obra.
+Os avatares dos depoimentos usam `toph.png`, `rock-lee.png` e `the-rock.png`, importados localmente por `src/features/testimonials/model/testimonials-content.ts`.
+
+As imagens são referências externas usadas neste trabalho acadêmico: Bocchi the Rock, o bloco de Minecraft (Bedrock), uma estátua moai, uma referência à Pedra Filosofal e retratos de Toph Beifong (Avatar), Rock Lee (Naruto) e Dwayne Johnson/The Rock. Antes de uma publicação pública, substitua ou credite os assets conforme a licença e os direitos de imagem de cada obra ou pessoa.
 
 ## Acessibilidade e movimento
 

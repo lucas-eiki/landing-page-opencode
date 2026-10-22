@@ -80,14 +80,30 @@
 
 .attribution {
   display: flex;
-  flex-direction: column;
-  gap: 6px;
+  align-items: center;
+  gap: 12px;
   color: var(--stone-text);
   font-family: var(--mono);
   font-size: 9px;
   letter-spacing: 0.1em;
   line-height: 1.6;
   text-transform: uppercase;
+}
+
+.attributionText {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.avatar {
+  width: clamp(64px, 7vw, 80px);
+  height: clamp(64px, 7vw, 80px);
+  flex: 0 0 auto;
+  object-fit: cover;
+  border: 1px solid var(--line);
+  border-radius: 50%;
 }
 
 .note {

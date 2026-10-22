@@ -34,14 +34,24 @@ export function Testimonials() {
               <figure key={testimonial.id} className={styles.quote}>
                 <blockquote>“{testimonial.quote}”</blockquote>
                 <figcaption className={styles.attribution}>
-                  <span>
-                    {testimonial.author} — {testimonial.city}
-                  </span>
-                  {edition ? (
+                  <img
+                    className={styles.avatar}
+                    src={testimonial.avatar}
+                    alt=""
+                    loading="lazy"
+                    decoding="async"
+                    style={{ objectPosition: testimonial.avatarPosition }}
+                  />
+                  <span className={styles.attributionText}>
                     <span>
-                      Ed. nº {edition.number} / {edition.name}
+                      {testimonial.author} — {testimonial.city}
                     </span>
-                  ) : null}
+                    {edition ? (
+                      <span>
+                        Ed. nº {edition.number} / {edition.name}
+                      </span>
+                    ) : null}
+                  </span>
                 </figcaption>
               </figure>
             )

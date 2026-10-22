@@ -1,4 +1,7 @@
 import type { Testimonial } from '../../../shared/model/testimonial'
+import rockLee from '../../../assets/images/rock-lee.png'
+import theRock from '../../../assets/images/the-rock.png'
+import toph from '../../../assets/images/toph.png'
 
 export const testimonialsContent = {
   label: '06',
@@ -12,25 +15,32 @@ export const testimonialsContent = {
   note: 'Depoimentos fictícios, como todo o resto.',
   quotes: [
     {
-      id: 'marina',
-      quote: 'Comprei a Bocchi em 2019. Até hoje não fez nada. Exatamente como prometido.',
-      author: 'Marina A.',
-      city: 'São Paulo',
+      id: 'toph',
+      quote: 'Nunca vi nada igual.',
+      author: 'Toph Beifong',
+      city: 'Gaoling',
       editionId: 'bocchi',
+      avatar: toph,
+      avatarPosition: '50% 35%',
     },
     {
-      id: 'rafael',
-      quote: 'Tentei usar como peso de papel. Funcionou. Fiquei decepcionado.',
-      author: 'Rafael M.',
-      city: 'Curitiba',
+      id: 'rock-lee',
+      quote:
+        'Não quebra. Muito útil nos treinos. Me sinto enganado',
+      author: 'Rock Lee',
+      city: 'Konoha',
       editionId: 'rocha-matriz',
+      avatar: rockLee,
+      avatarPosition: '50% 35%',
     },
     {
-      id: 'beatriz',
-      quote: 'Minha sala tinha um vazio. Agora tem um vazio com propósito.',
-      author: 'Beatriz L.',
-      city: 'Rio de Janeiro',
+      id: 'the-rock',
+      quote: 'Literalmente eu. 🗿🍷',
+      author: 'The Rock',
+      city: 'Miami',
       editionId: 'rocha-sigma',
+      avatar: theRock,
+      avatarPosition: '50% 40%',
     },
   ] satisfies Testimonial[],
 } as const

@@ -8,7 +8,7 @@ Define the fictional Casa Seixo edition catalog: its four editions, pricing and 
 
 ### Requirement: Edition catalog
 
-The application SHALL present four fictional editions — Basalto, Granito, Quartzo, and Óxido — each with an edition number, name, stone type, short description, price, availability state, and an image slot. The catalog SHALL display every edition in a responsive grid.
+The application SHALL present four fictional editions — Bocchi, A Rocha; Rocha matriz; Rocha sigma; and Rocha filosófica — each with an edition number, name, stone type, short description, price, availability state, and an image slot. The catalog SHALL display every edition in a responsive grid.
 
 #### Scenario: Catalog composition
 
@@ -17,7 +17,7 @@ The application SHALL present four fictional editions — Basalto, Granito, Quar
 
 #### Scenario: Archive edition
 
-- **WHEN** the Óxido edition is displayed
+- **WHEN** the Rocha filosófica edition is displayed
 - **THEN** it is marked as archive or unavailable and does not offer a reservation action.
 
 ### Requirement: Edition card metadata
@@ -50,7 +50,7 @@ Activating an edition card SHALL open a modal dialog with the edition image, ful
 
 #### Scenario: Archive edition dialog
 
-- **WHEN** the visitor opens the Óxido edition dialog
+- **WHEN** the visitor opens the Rocha filosófica edition dialog
 - **THEN** the reservation action is absent or disabled with an explanation that the edition is archived.
 
 ### Requirement: Reservation handoff

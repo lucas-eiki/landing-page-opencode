@@ -4,4 +4,6 @@ export interface Testimonial {
   author: string
   city: string
   editionId: string
+  avatar: string
+  avatarPosition?: string
 }
