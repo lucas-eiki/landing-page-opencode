@@ -7,7 +7,7 @@
 
 .inner {
   display: grid;
-  gap: clamp(40px, 7vw, 88px);
+  gap: clamp(40px, 3vw, 88px);
 }
 
 .top {
@@ -96,7 +96,7 @@
   display: block;
   margin-block: -0.08em -0.14em;
   font-family: var(--display);
-  font-size: clamp(4.5rem, 19vw, 17rem);
+  font-size: clamp(1.25rem, 5vw, 4rem);
   font-variation-settings: 'opsz' 144, 'WONK' 1;
   letter-spacing: -0.05em;
   word-spacing: 0.12em;
